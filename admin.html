@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Dashboard</title>
+  <link rel="stylesheet" href="styles/admin.css">
+</head>
+<body>
+
+<h1>Admin Dashboard</h1>
+
+<div class="stats">
+  <div>Total Transactions: <span id="total"></span></div>
+  <div>Successful: <span id="success"></span></div>
+  <div>Revenue (GHS): <span id="revenue"></span></div>
+</div>
+
+<div class="controls">
+
+  <input type="text" id="searchInput" placeholder="Search ref or phone">
+
+  <select id="networkFilter">
+    <option value="">All Networks</option>
+    <option>MTN</option>
+    <option>Telecel</option>
+    <option>AirtelTigo</option>
+  </select>
+
+  <select id="statusFilter">
+    <option value="">All Status</option>
+    <option value="pending">Pending</option>
+    <option value="processing">Processing</option>
+    <option value="success">Success</option>
+    <option value="failed">Failed</option>
+  </select>
+
+  <button id="refreshBtn">Refresh</button>
+
+</div>
+
+<table>
+  <thead>
+    <tr>
+      <th>Reference</th>
+      <th>Network</th>
+      <th>Bundle</th>
+      <th>Phone</th>
+      <th>Amount</th>
+      <th>Payment</th>
+      <th>Vendor</th>
+      <th>Status</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody id="tableBody"></tbody>
+</table>
+
+<script src="./code/admin.js"></script>
+
+
+</body>
+</html>
